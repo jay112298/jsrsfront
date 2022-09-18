@@ -1,0 +1,22 @@
+/* ===========================================
+Hero and Service Section Start
+======================================= */
+
+.section-services {
+  padding: 9.6rem 0;
+  background-color: #a5d8ff;
+  height: 60vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-services {
+  background: #f3f0ff;
+}
+
+
+.section-services p {
+  font-size: 3.2rem;
+}

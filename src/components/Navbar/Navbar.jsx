@@ -1,23 +1,23 @@
-import React, { useState } from "react";
-import './Navbar.css'
-import Logo from '../../assets/logo.jpg'
+import React from "react";
+import "./Navbar.css";
+import Logo from "../../assets/logo.jpg";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <div className="nav-logo"><img className="logo" src={Logo} /></div>
-      <div className="nav">
-        <ul className="nav-list">
-          <li className="list-items">HOME</li>
-          <li className="list-items">BLOG</li>
-          <li className="list-items">ABOUT</li>
-          <li className="list-items">CONTACT</li>
-          <button className="login-btn">LOGIN</button>
+    <header className="header">
+      <img src={Logo} alt="Logo" className="logo"/>
+
+      <nav className="navbar">
+        <ul className="navbar-list">
+          <li className="navbar-link">Home</li>
+          <li className="navbar-link">Blog</li>
+          <li className="navbar-link">About</li>
+          <li className="navbar-link">Contact</li>
+          <li className="navbar-link "><button className="login-btn">Login</button></li>
         </ul>
-        
-      </div>
-    </nav>
-  )
-}
+      </nav>
+    </header>
+  );
+};
 
 export default Navbar;
