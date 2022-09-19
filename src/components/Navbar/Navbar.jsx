@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./Navbar.css";
-import Logo from "../../assets/logo.jpg";
+import Logo from "../../assets/logo.png";
 import { CgMenu, CgCloseR } from "react-icons/cg";
 
 const Navbar = () => {

@@ -74,7 +74,7 @@
 
   .navbar-list {
     width: 100vw;
-    height: 150vh;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -100,7 +100,7 @@
   .active .mobile-nav-icon {
     font-size: 4.2rem;
     position: absolute;
-    top: 30%;
+    top: 10%;
     right: 10%;
     color: #212529;
     z-index: 9999;
