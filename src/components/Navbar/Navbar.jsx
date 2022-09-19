@@ -24,8 +24,13 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="mobile-navbar-btn" onClick={changeButton}>
-        <CgMenu name="menu-outline" className="mobile-nav-icon"/>
-        <CgCloseR name="close-outline" className="mobile-nav-icon close-outline" />
+        {isMenu ? (
+          <CgCloseR name="menu-outline" className="mobile-nav-icon" />
+          ) : (
+          <CgMenu name="menu-outline" className="mobile-nav-icon" />
+        )}
+        {/* <CgMenu name="menu-outline" className="mobile-nav-icon"/> */}
+        {/* <CgCloseR name="close-outline" className="mobile-nav-icon close-outline" /> */}
       </div>
     </nav>
   );
