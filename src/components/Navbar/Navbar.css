@@ -117,7 +117,9 @@
     transform: translateX(0);
     z-index: 999;
   }
-  /* body {
-    overflow-x: hidden;
-  } */
+  @media (max-width: 798px) {
+    .header .logo {
+      height: 5rem;
+    }
+  }
 }
