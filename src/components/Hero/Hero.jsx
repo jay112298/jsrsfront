@@ -1,12 +1,12 @@
 import React from 'react'
 import "./Hero.css"
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <main>
         <section className="section-hero">
             <div className="hero">
-                <p>Hero Section</p>
+                <p>{props.inp}</p>
             </div>
         </section>
     </main>

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./Navbar.css";
 import Logo from "../../assets/logo.png";
 import { CgMenu, CgCloseR } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -16,11 +17,11 @@ const Navbar = () => {
 
       <div className={isMenu ? "navbar active" : "navbar"}>
         <ul className="navbar-list active">
-          <li className="navbar-link">Home</li>
-          <li className="navbar-link">Blog</li>
-          <li className="navbar-link">About</li>
-          <li className="navbar-link">Contact</li>
-          <li className="navbar-link "><button className="login-btn">Login</button></li>
+          <li><Link to="/" className="navbar-link">Home</Link></li>
+          <li><Link to="/blog" className="navbar-link">Blog</Link></li>
+          <li><Link to="/about" className="navbar-link">About</Link></li>
+          <li><Link to="/contact" className="navbar-link">Contact</Link></li>
+          <li className="navbar-link"><button className="login-btn">Login</button></li>
         </ul>
       </div>
       <div className="mobile-navbar-btn" onClick={changeButton}>
