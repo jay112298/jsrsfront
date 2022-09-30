@@ -1,0 +1,134 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.box {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	/* border-radius: 3rem;
+	border: 5px solid black; */
+}
+
+.img-container {
+	height: 70vh;
+	overflow: hidden;
+}
+
+
+.img{
+	height: 100%;
+	object-fit: cover;
+}
+
+.img-container img {
+	overflow: hidden;
+}
+
+.form-section{
+	height: 70vh;
+	background-color: #ffedcd98;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	border-top-right-radius: 1.5rem;
+	border-bottom-right-radius: 1.5rem;
+}
+
+.form-section > h2 {
+	padding: 2rem 2rem;
+	color: #f07c70;
+	font-size: 1.8rem;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+}
+
+.invisible {
+	display: none;
+}
+
+form input[type="text"] {
+	margin: 1rem 1rem;
+	border: none;
+	width: 15vw;
+	border: solid 1px #adadad;
+	/* border-bottom: 1px solid rgb(163, 157, 157); */
+	font-size: 1.5rem;
+	padding: 5px 15px;
+	border-radius: 1.5rem;
+} 
+form input[type="password"] {
+	margin: 1rem 1rem;
+	border: none;
+	width: 15vw;
+	border: solid 1px #adadad;
+	/* border-bottom: 1px solid rgb(163, 157, 157); */
+	font-size: 1.5rem;
+	padding: 5px 15px;
+	border-radius: 1.5rem;
+} 
+form input[type="email"] {
+	margin: 1rem 1rem;
+	border: none;
+	width: 15vw;
+	border: solid 1px #adadad;
+	/* border-bottom: 1px solid rgb(163, 157, 157); */
+	font-size: 1.5rem;
+	padding: 5px 15px;
+	border-radius: 1.5rem;
+} 
+form input[type="radio"] {
+	display: block;
+	margin: 1rem 1rem;
+	border: none;
+	/* border-bottom: 1px solid rgb(163, 157, 157); */
+	font-size: 2rem;
+	
+}
+
+fieldset {
+	margin: 1rem 1rem;
+	display: flex;
+	align-items: center;
+	width: 15vw;
+}
+
+fieldset > label{
+	margin-right: 2rem;
+}
+
+input:focus {
+	outline: none;
+}
+
+.inactive {
+	display: none;
+}
+
+.next {
+	font-size: 2rem;
+	background-color: #f07c70;
+	border : none;
+	padding: 1rem 2rem;
+	margin : 1rem 1rem ;
+	color: aliceblue;
+	border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+	.box{
+		flex-direction: column;
+	}
+	form input[type="text"] {
+		margin: 1rem 1rem;
+		border: none;
+		width: 50vw;
+		border-bottom: 1px solid rgb(163, 157, 157);
+		font-size: 2rem;
+	}
+	
+}
