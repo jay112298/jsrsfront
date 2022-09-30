@@ -68,8 +68,6 @@
     color: #212529;
   }
 
-  
-
   /* Hide the original navbar menu  */
 
   .navbar-list {
@@ -85,7 +83,8 @@
     justify-content: center;
     align-items: center;
 
-    transform: translateX(100%);
+    /* transform: translateX(100%); */
+    display: none;
   }
 
   .navbar-link {
@@ -114,7 +113,8 @@
   .active .navbar-list {
     visibility: visible;
     opacity: 1;
-    transform: translateX(0);
+    /* transform: translateX(0); */
+    display: flex;
     z-index: 999;
   }
   @media (max-width: 798px) {
