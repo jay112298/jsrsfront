@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import ramji from "../../../assets/ramji.jpg";
 import "./Signup.css";
-import { TbNumber1, TbNumber2 } from "react-icons/Tb";
-import { GoChevronRight } from "react-icons/Go";
 
 const Signup = () => {
   const [page, setPage] = useState(false);
