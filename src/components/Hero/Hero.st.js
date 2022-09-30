@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import Logo from "../../assets/bow.png";
+import Bow from "../../assets/bow.png";
+import BowMob from "../../assets/bow-mob.png";
 
 
 export const Section = styled.section`
     background-color: #b7b7b7;
-    background-image: url(${Logo});
+    background-image: url(${Bow});
     background-size: 100% 100%;
 
     width: 100vw;
@@ -65,6 +66,9 @@ export const Section = styled.section`
       }
     }
     @media screen and (max-width: 980px) {
+      background-image: url(${BowMob});
+      width: 100vw;
+      height: 118vw;
       div {
 
         top: 5rem;
