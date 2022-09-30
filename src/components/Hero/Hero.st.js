@@ -46,21 +46,17 @@ export const Section = styled.section`
         left: 10rem;
         width: 40rem;
         height: 40rem;
-        background-color: #fec627;
-        opacity: 0.5;
-        align-items: center;
+
       }
       div > p {
         font-size: 4.3rem;
         padding: 3rem 3rem;
-        font-weight: bold;
+
       }
       button {
         padding: 1.5rem 3rem;
         font-size: 2.5rem;
-        border-radius: 20px;
-        display: inline-block;
-        opacity: 1;
+
       }
       button:hover {
       }
@@ -75,15 +71,30 @@ export const Section = styled.section`
         left: 5rem;
         width: 30rem;
         height: 30rem;
-        background-color: #fec627;
-        opacity: 0.5;
-        align-items: center;
       }
       div > p {
         font-size: 3rem;
       }
       button {
         padding: 1rem 2rem;
+        font-size: 1.5rem;
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      div{
+        top: 2rem;
+        left: 2rem;
+        width: 20rem;
+        height: 20rem;
+      }
+      div > p {
+        font-size: 2rem;
+        padding: 1rem;
+      }
+      button {
+        padding: 1rem 1.5rem;
+        margin-top: 1rem;
         font-size: 1.5rem;
       }
     }
