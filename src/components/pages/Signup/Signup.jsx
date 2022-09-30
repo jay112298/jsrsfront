@@ -1,13 +1,18 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import ramji from "../../../assets/ramji.jpg";
 import "./Signup.css";
 
 const Signup = () => {
   const [page, setPage] = useState(false);
 
+  const [regStatus, setRegStatus] = useState(false);
+
   const changePage = () => {
     setPage(!page);
   };
+
+  var message; // message to display
 
   const [formData, setFormData] = useState({
     name: "",
@@ -34,22 +39,66 @@ const Signup = () => {
     });
   }
 
-  function setMale() {
-    setFormData((prevFormData) => {
-      return {
-        ...prevFormData,
-        gender: "Male",
-      };
+  const postData = async (event) => {
+    event.preventDefault();
+
+    const {
+      name,
+      lastname,
+      username,
+      jsrsId,
+      gender,
+      age,
+      email,
+      profession,
+      phone,
+      address,
+      password,
+    } = formData;
+
+    const res = await fetch("https://jsrs.azurewebsites.net/api/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        lastname,
+        username,
+        jsrsId,
+        gender,
+        age,
+        email,
+        profession,
+        phone,
+        address,
+        password,
+      }),
     });
-  }
-  function setFemale() {
-    setFormData((prevFormData) => {
-      return {
-        ...prevFormData,
-        gender: "Female",
-      };
-    });
-  }
+
+    const data = await res.json();
+
+    if (data.status === 422 || !data) {
+      // window.alert(data);
+      console.log("Invalid registration");
+      message = "There was an error registering your account" + data.error;
+      setRegStatus(true);
+    } else {
+      // window.alert(data);
+      console.log("Registration successfully registered", data);
+
+      if (data.id) {
+        setRegStatus(true);
+        message = "You have successfully registered";
+      } else if (data.error) {
+        message = "There was an error registering your account" + data.error;
+        setRegStatus(true);
+      } else if (data.err) {
+        message = "There was an err registering your account" + data.err;
+        setRegStatus(true);
+      }
+    }
+  };
 
   return (
     <div className="container">
@@ -59,6 +108,7 @@ const Signup = () => {
         </div>
         <div className="form-section">
           <h2 className="title">Create an account</h2>
+          {regStatus && <h2 className="title">{message}</h2>}
           <form className={page ? "form invisible" : "form"}>
             <input
               type="text"
@@ -91,7 +141,7 @@ const Signup = () => {
                 id="male"
                 name="gender"
                 value="male"
-                onClick={setMale}
+                onChange={handleChange}
               />
               <label htmlFor="male">Male</label>
               <br />
@@ -101,7 +151,7 @@ const Signup = () => {
                 id="female"
                 name="gender"
                 value="female"
-                onClick={setFemale}
+                onChange={handleChange}
               />
               <label htmlFor="female">Female</label>
               <br />
@@ -115,19 +165,27 @@ const Signup = () => {
               name="age"
             />
           </form>
-          <form className={page ? "form" : "form invisible"}>
+          <form className={page && !regStatus ? "form" : "form invisible"}>
             <input
               onChange={handleChange}
               type="email"
               placeholder="Email"
               name="email"
             />
-            <input
+            <label htmlFor="profession">Select your profession</label>
+            <select
+              id="profession"
+              value={formData.profession}
               onChange={handleChange}
-              type="text"
-              placeholder="Profession"
               name="profession"
-            />
+            >
+              <option value="">_SELECT_Profession</option>
+              <option value="student">Student</option>
+              <option value="pvt-job">Private Job</option>
+              <option value="govt-job">Govt Job</option>
+              <option value="business">Business</option>
+              <option value="other">Other</option>
+            </select>
             <input
               onChange={handleChange}
               type="text"
@@ -147,15 +205,23 @@ const Signup = () => {
               name="password"
             />
           </form>
-          <button className={page ? "next" : "next"} onClick={changePage}>
+          <button
+            className={regStatus ? "next invisible" : "next"}
+            onClick={changePage}
+          >
             {page ? "Prev" : "Next"}
           </button>
           <button
-            className={page ? "next" : "next invisible"}
-            onClick={changePage}
+            className={page && !regStatus ? "next" : "next invisible"}
+            onClick={postData}
           >
             SUBMIT
           </button>
+          <Link to="/signin">
+            <button className={regStatus ? "next" : "next invisible"}>
+              Login
+            </button>
+          </Link>
         </div>
       </div>
     </div>

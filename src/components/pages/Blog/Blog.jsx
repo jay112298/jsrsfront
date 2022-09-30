@@ -1,10 +1,8 @@
-import React from 'react'
-import Hero from '../../Hero/Hero'
+import React from "react";
+import Intro from "../../Intro/Intro";
 
 const Blog = () => {
-  return (
-    <Hero inp={"Blog Page"}/>
-  )
-}
+  return <Intro inp={"Blog Page"} />;
+};
 
-export default Blog
+export default Blog;

@@ -1,11 +1,8 @@
-import React from 'react'
-import Hero from '../../Hero/Hero'
-
+import React from "react";
+import Intro from "../../Intro/Intro";
 
 const About = () => {
-  return (
-    <Hero inp={"About Page"}/>
-  )
-}
+  return <Intro inp={"About Page"} />;
+};
 
-export default About
+export default About;
