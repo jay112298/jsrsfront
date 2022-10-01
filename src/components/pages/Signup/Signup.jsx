@@ -6,13 +6,11 @@ import "./Signup.css";
 const Signup = () => {
   const [page, setPage] = useState(false);
 
-  const [regStatus, setRegStatus] = useState(false);
+  const [regStatus, setRegStatus] = useState("");
 
   const changePage = () => {
     setPage(!page);
   };
-
-  var message; // message to display
 
   const [formData, setFormData] = useState({
     name: "",
@@ -81,22 +79,14 @@ const Signup = () => {
     if (data.status === 422 || !data) {
       // window.alert(data);
       console.log("Invalid registration");
-      message = "There was an error registering your account" + data.error;
-      setRegStatus(true);
+      setRegStatus("There was an error registering your account");
+    } else if (data.status === 400) {
+      window.alert(data.err);
+      setRegStatus("Error in saving");
     } else {
-      // window.alert(data);
-      console.log("Registration successfully registered", data);
-
-      if (data.id) {
-        setRegStatus(true);
-        message = "You have successfully registered";
-      } else if (data.error) {
-        message = "There was an error registering your account" + data.error;
-        setRegStatus(true);
-      } else if (data.err) {
-        message = "There was an err registering your account" + data.err;
-        setRegStatus(true);
-      }
+      console.log("That was a success!");
+      window.alert("Huurah, you got saved successfully!");
+      setRegStatus("Success! Login to your account.");
     }
   };
 
@@ -107,8 +97,8 @@ const Signup = () => {
           <img className="img" src={ramji} alt="" />
         </div>
         <div className="form-section">
-          <h2 className="title">Create an account</h2>
-          {regStatus && <h2 className="title">{message}</h2>}
+          {!regStatus && <h2 className="title">Create an account</h2>}
+          {regStatus && <h2 className="title">{regStatus}</h2>}
           <form className={page ? "form invisible" : "form"}>
             <input
               type="text"
@@ -172,14 +162,14 @@ const Signup = () => {
               placeholder="Email"
               name="email"
             />
-            <label htmlFor="profession">Select your profession</label>
+            <label htmlFor="profession">Select your skill</label>
             <select
               id="profession"
               value={formData.profession}
               onChange={handleChange}
               name="profession"
             >
-              <option value="">_SELECT_Profession</option>
+              <option value="">_SELECT_Skill</option>
               <option value="student">Student</option>
               <option value="pvt-job">Private Job</option>
               <option value="govt-job">Govt Job</option>

@@ -36,7 +36,7 @@
   background-color: #a5d8ff; /* Bluish White */
   border: none;
   color: #212529;
-  padding: 0.5rem 2rem;
+  padding: 0.8rem 2rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -118,6 +118,9 @@
     z-index: 999;
   }
   @media (max-width: 798px) {
+    .header {
+      padding: 0 1.5rem;
+    }
     .header .logo {
       height: 5rem;
     }
