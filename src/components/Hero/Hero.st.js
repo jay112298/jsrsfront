@@ -34,9 +34,18 @@ export const Section = styled.section`
       border: none;
       padding: 2rem 4rem;
       font-size: 2.5rem;
-      border-radius: 20px;
+      border-radius: 15px;
       display: inline-block;
       opacity: 1;
+      box-shadow: -3px 3px 2px gray, 1px 3px 2px gray;
+      transition: 500ms ease-out;
+    }
+
+    button:hover {
+      box-shadow: none;
+      transform: translate(-5px, 2px);
+      /* transform: translateX(-40px); */
+
     }
 
     @media screen and (max-width: 1300px) {

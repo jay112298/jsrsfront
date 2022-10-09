@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import ramji from "../../../assets/ramji.jpg";
+import ramji from "../../assets/ramji.jpg";
 import "./Signup.css";
 
 const Signup = () => {

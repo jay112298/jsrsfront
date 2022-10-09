@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    height: 86vh;
+    height: 84vh;
     margin: 10px;
     display: grid;
     grid-gap: 5px;
@@ -71,6 +71,7 @@ export const Wrapper = styled.div`
         color: #ffeead;
     }
 
+    
     @media (max-width: 1300px) {
         .menu {
             font-size: 2em;

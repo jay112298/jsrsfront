@@ -10,9 +10,15 @@ export const Container = styled.div`
 
     & > div {
         display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: #ff6f69;
         font-size: 2em;
         color: #ffeead;
     }
     
+    @media (max-width: 1400px) {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-auto-rows: 151px;
+    }
 `
