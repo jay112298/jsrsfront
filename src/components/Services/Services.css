@@ -1,22 +1,49 @@
 /* ===========================================
-Hero and Service Section Start
+About Section Start
 ======================================= */
 
-.section-services {
-  padding: 9.6rem 0;
-  background-color: #a5d8ff;
-  height: 60vh;
-
+.section-about {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
+  height: auto;
 }
 
-.section-services {
-  background: #f3f0ff;
+.left {
+  flex: 50%;
+  width: 50%;
+  max-width: 100%;
 }
 
 
-.section-services p {
+
+.right {
+  background-image: url("https://ik.imagekit.io/jsrsngp/about-section-bg_ZwsvjRZHst.jpg");
+  flex: 50%;
+  height: 100%;
+  padding: 4rem;
+}
+
+.section-about-header {
+  font-size: 5rem;
+  padding: 2rem 2rem;
+}
+
+.section-about-text {
   font-size: 3.2rem;
+}
+
+@media (max-width: 980px) {
+  
+  /* .section-about {
+
+    flex-direction: column;
+  } */
+  .left {
+    width: 100%;
+    flex: 100%;
+  }
+  .right {
+    flex: 100%;
+  }
 }

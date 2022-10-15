@@ -46,7 +46,7 @@ const Navbar = () => {
             </Link>}
           </li>
         </ul>
-            {isAuthenticated &&  <Link to="/dashboard"><div className="person"> <GoPerson /> </div></Link>}
+            {isAuthenticated &&  <Link to="/dashboard"><div className="person" > <GoPerson /> </div></Link>}
       </div>
       <div className="mobile-navbar-btn" onClick={changeButton}>
         {isMenu ? (

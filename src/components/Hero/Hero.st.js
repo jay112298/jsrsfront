@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import Bow from "../../assets/bow.png";
-import BowMob from "../../assets/bow-mob.png";
+//import Bow from ;
+//import BowMob from ;
 
 
 export const Section = styled.section`
     background-color: #b7b7b7;
-    background-image: url(${Bow});
+    background-image: url("https://ik.imagekit.io/jsrsngp/bow_jyqWefWhG.png");
     background-size: 100% 100%;
 
     width: 100vw;
@@ -71,7 +71,7 @@ export const Section = styled.section`
       }
     }
     @media screen and (max-width: 980px) {
-      background-image: url(${BowMob});
+      background-image: url("https://ik.imagekit.io/jsrsngp/bow-mob_Ez0e3pRMq.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664615912378");
       width: 100vw;
       height: 118vw;
       div {
