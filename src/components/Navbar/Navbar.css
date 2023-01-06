@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e7f5ff;
+  background-color: #383737;
 }
 
 .header .logo {
@@ -36,7 +36,7 @@
 
 .navbar-link:hover,
 .navbar-link:active {
-  color: #364fc7;
+  color: #e4e4e4;
 }
 
 .login-btn {
@@ -158,4 +158,8 @@
       height: 5rem;
     }
   }
+}
+
+.navbar-link{
+  color: #a4a4a4;
 }
