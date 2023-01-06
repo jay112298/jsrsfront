@@ -39,14 +39,13 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="navbar-link">
-            {!isAuthenticated && <Link to="/signin">
+            {!authStatus && <Link to="/signin">
               <button className="login-btn">
-                {isAuthenticated ? "Logout" : "Login"}
+                {authStatus ? "Logout" : "Login"}
               </button>
             </Link>}
           </li>
         </ul>
-            {isAuthenticated &&  <Link to="/dashboard"><div className="person" > <GoPerson /> </div></Link>}
       </div>
       <div className="mobile-navbar-btn" onClick={changeButton}>
         {isMenu ? (

@@ -1,6 +1,5 @@
 import styled from "styled-components";
-//import Bow from ;
-//import BowMob from ;
+
 
 
 export const Section = styled.section`
