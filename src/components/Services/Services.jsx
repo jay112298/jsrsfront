@@ -1,11 +1,13 @@
 import React from "react";
+import { BodyBox } from "./Services.st";
 
 
 const Services = () => {
   return (
-    <section className="section-about">
-     Services
-    </section>
+    <BodyBox>
+      <div className="widgets">Widgets</div>
+      <div className="sidebar">SideBar</div>
+    </BodyBox>
   );
 };
 
