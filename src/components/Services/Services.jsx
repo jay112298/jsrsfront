@@ -1,6 +1,7 @@
 import React from "react";
 import { BodyBox } from "./Services.st";
 import Event from "../Widgets/Event/Event";
+import About from '../Widgets/About/About'
 
 
 const Services = () => {
@@ -8,7 +9,7 @@ const Services = () => {
     <BodyBox>
       <div className="widgets">
         <Event />
-        <div className="widget-box-2">Widget 2</div>
+        <About />
         <div className="widget-box-3">Widget 3</div>
         <div className="widget-box-4">Widget 4</div>
         <div className="widget-box-5">Widget 5</div>
