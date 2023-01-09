@@ -1,5 +1,5 @@
 import React from 'react'
-import {Section} from './Hero2.st'
+import { Section } from './Hero2.st'
 
 const Hero2 = () => {
   return (

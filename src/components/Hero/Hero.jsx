@@ -4,16 +4,13 @@ import { Section } from "./Hero.st.js";
 
 const Hero = (props) => {
   return (
-    <main>
-      <Section>
-        <div className="hero">
-          <p>Your small contribution can help us establish Ram Rajya</p>
-          <Link to="/signup">
-            <button>SignUp</button>
-          </Link>
+    <Section>
+        <div className="left">
+            <div className="title">JSRS Nagpur</div>
+            <div className="tagline">City unit of Jai ShriRam Sena.Our vision is to engage more people in the fight for better Life and Society as a ramrajya.</div>
         </div>
-      </Section>
-    </main>
+        <div className="right"></div>
+    </Section>
   );
 };
 
