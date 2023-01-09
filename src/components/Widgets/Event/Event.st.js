@@ -5,10 +5,18 @@ export const EventWidget = styled.div`
     .box1-top {
         background-color: #feb86d;
         margin: 15px;
-        border-radius: 5px;
+        padding: 5px 0;
+        border-radius: 20px;
         font-size: 25px;
         color: #fff;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        svg {
+            color: #000
+        }
     }
     .box1-bottom {
         margin: 15px;

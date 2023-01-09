@@ -1,10 +1,14 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 0 4.8rem;
   height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #383737;
+  background-color: rgba();
 }
 
 .header .logo {
@@ -24,14 +28,16 @@
   list-style: none;
 }
 
+
 .navbar-link {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 2rem;
   font-weight: 500;
-  color: #212529;
+  color: #000;
   transition: all 0.3s;
+  opacity: 1;
 }
 
 .navbar-link:hover,
@@ -40,9 +46,9 @@
 }
 
 .login-btn {
-  background-color: #a5d8ff; /* Bluish White */
+  background-color: #f67903; /* Bluish White */
   border: none;
-  color: #212529;
+  color: #cba58f;
   padding: 0.8rem 2rem;
   text-align: center;
   text-decoration: none;
@@ -160,6 +166,3 @@
   }
 }
 
-.navbar-link{
-  color: #a4a4a4;
-}
