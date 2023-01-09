@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Section = styled.div`
-    background: linear-gradient(90deg, #EFEEEE 0%, rgba(237, 236, 236, 0.885417) 36.98%, rgba(240, 240, 240, 0) 69.79%);;
+    background: linear-gradient(90deg, #EFEEEE 0%, rgba(237, 236, 236, 0.885417) 36.98%, rgba(240, 240, 240, 0) 69.79%);
     display: flex;
     align-items: center;
     height: 900px;
