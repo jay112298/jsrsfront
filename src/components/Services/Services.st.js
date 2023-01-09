@@ -13,19 +13,6 @@ export const BodyBox = styled.article`
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
 
-        .widget-box-1 {
-            .box1-top {
-                background-color: #feb86d;
-                margin: 15px;
-                border-radius: 5px;
-            }
-            .box1-bottom {
-                margin: 15px;
-                background-color: #feb86d;
-                border-radius: 5px;
-            }
-        }
-
         .widget-box-4 {
             grid-row: 2 / 4;
         }

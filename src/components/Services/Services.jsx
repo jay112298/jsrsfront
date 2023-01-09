@@ -1,21 +1,13 @@
 import React from "react";
 import { BodyBox } from "./Services.st";
+import Event from "../Widgets/Event/Event";
 
 
 const Services = () => {
   return (
     <BodyBox>
       <div className="widgets">
-        <div className="widget-box-1">
-          <div className="box1-top">Header</div>
-          <div className="box1-bottom">
-            Body
-            Body
-            Body
-            Body
-            Body
-          </div>
-        </div>
+        <Event />
         <div className="widget-box-2">Widget 2</div>
         <div className="widget-box-3">Widget 3</div>
         <div className="widget-box-4">Widget 4</div>
