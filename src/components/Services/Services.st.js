@@ -8,6 +8,7 @@ export const BodyBox = styled.article`
         flex: 3;
         background: linear-gradient(to right, #edeceb, #efeeee, #efeeef, #f0efee, #f0f0f0);
         display: grid;
+        gap: 15px;
         align-items: center;
         justify-content: center;
         grid-template-columns: repeat(3, 1fr);

@@ -3,7 +3,9 @@ import { AboutWidget } from './About.st'
 
 const About = () => {
   return (
-    <AboutWidget>About Section</AboutWidget>
+    <AboutWidget>
+      <div className="about-heading"><hr/>About</div>
+    </AboutWidget>
   )
 }
 

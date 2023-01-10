@@ -4,7 +4,8 @@ export const EventWidget = styled.div`
 
     .box1-top {
         background-color: #feb86d;
-        margin: 15px;
+        margin-top: 15px;
+        margin-left: 15px;
         padding: 5px 0;
         border-radius: 10px;
         font-size: 25px;
@@ -16,7 +17,8 @@ export const EventWidget = styled.div`
 
     }
     .box1-bottom {
-        margin: 15px;
+        margin-top: 15px;
+        margin-left: 15px;
         height: 250px;
         padding: 15px;
         background-color: #feb86d;
