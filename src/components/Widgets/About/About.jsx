@@ -3,7 +3,7 @@ import { AboutWidget } from './About.st'
 
 const About = () => {
   return (
-    <AboutWidget>About section</AboutWidget>
+    <AboutWidget>About Section</AboutWidget>
   )
 }
 
