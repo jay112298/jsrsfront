@@ -7,7 +7,7 @@ const Hero = (props) => {
     <Section>
         <div className="left">
             <div className="title">JSRS Nagpur</div>
-            <div className="tagline">City unit of Jai ShriRam Sena.Our vision is to engage more people in the fight for better Life and Society as a ramrajya.</div>
+            <div className="tagline">World's First Hindu Social & Ground Unity Network</div>
         </div>
         <div className="right">
           <img src="https://ik.imagekit.io/jsrsngp/bow_jyqWefWhG.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664615917428" alt="" />

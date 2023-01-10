@@ -9,7 +9,13 @@ export const Section = styled.div`
 
     .left {
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
+        height: 250px;
+        background: rgba(189, 83, 48,0.6);
 
         div {
             margin: 0 15px
